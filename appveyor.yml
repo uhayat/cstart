@@ -8,3 +8,9 @@ build_script:
     cd build-windows\
 
     nmake /f cstart.mak
+
+    cd ..\
+
+test_script:
+- cmd: echo %CD%
+- cmd: build-windows\main.exe
